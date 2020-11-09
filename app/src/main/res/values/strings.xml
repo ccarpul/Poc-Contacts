@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Contacts PoC</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="description_fab">Add User</string>
+    <string name="editHintName">Name</string>
+    <string name="editHintPhone">Phone</string>
+    <string name="editHintAddress">Address</string>
+    <string name="birthday">Birthday</string>
+    <string name="titlebar">My List of Contacts</string>
+</resources>

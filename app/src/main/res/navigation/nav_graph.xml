@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/listContactsFragment">
+
+    <fragment
+        android:id="@+id/listContactsFragment"
+        android:name="com.example.contactspoc.ui.home.ListContactsFragment"
+        android:label="fragment_list"
+        tools:layout="@layout/activity_main" >
+        <action
+            android:id="@+id/action_listContactsFragment_to_detailContactFragment"
+            app:destination="@id/detailContactFragment" />
+        <action
+            android:id="@+id/action_listContactsFragment_to_editFragment"
+            app:destination="@id/editFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailContactFragment"
+        android:name="com.example.contactspoc.ui.details.DetailContactFragment"
+        android:label="fragment_detail"
+        tools:layout="@layout/fragment_detail" >
+        <action
+            android:id="@+id/action_detailContactFragment_to_listContactsFragment"
+            app:destination="@id/listContactsFragment" />
+        <argument
+            android:name="detailContact"
+            app:argType="com.example.contactspoc.data.model.Contact"
+            app:nullable="true" />
+        <action
+            android:id="@+id/action_detailContactFragment_to_editFragment"
+            app:destination="@id/editFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/editFragment"
+        android:name="com.example.contactspoc.ui.edit.EditFragment"
+        android:label="EditFragment"
+        tools:layout="@layout/fragment_edit">
+        <action
+            android:id="@+id/action_editFragment_to_listContactsFragment"
+            app:destination="@id/listContactsFragment" />
+        <argument
+            android:name="contactDetail"
+            app:argType="com.example.contactspoc.data.model.Contact"
+            app:nullable="true"
+            android:defaultValue="@null" />
+    </fragment>
+</navigation>

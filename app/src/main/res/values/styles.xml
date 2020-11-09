@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Theme.ContactsPoC.Shapeable" parent="ShapeAppearanceOverlay.MaterialComponents.MaterialCalendar.Day">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">50%</item>
+
+    </style>
+
+    <style name="Theme.ContactsPoc.TextInput"
+        parent="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <item name="hintTextAppearance">?attr/textAppearanceSearchResultTitle</item>
+        <item name="hintTextColor">?attr/colorPrimary</item>
+        <item name="boxStrokeWidth">2dp</item>
+        <item name="boxStrokeColor">?attr/colorPrimary</item>
+    </style>
+</resources>
